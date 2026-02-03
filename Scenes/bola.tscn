@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://qfpok1jh70hw"]
+
+[ext_resource type="Script" uid="uid://5nik0erwj0m3" path="res://Scripts/bola.gd" id="1_5mbwn"]
+[ext_resource type="Texture2D" uid="uid://dyrn8q1666xvc" path="res://Assets/sprites/bola.png" id="1_17s4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mbwn"]
+
+[node name="Bola" type="Area2D" unique_id=620180929]
+script = ExtResource("1_5mbwn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=961267643]
+texture = ExtResource("1_17s4t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1909699296]
+shape = SubResource("RectangleShape2D_5mbwn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
