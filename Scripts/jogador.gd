@@ -4,13 +4,10 @@ extends CharacterBody2D
 var velocidade_do_jogador : int = 500
 
 
-func _ready() -> void:
-	pass
-
-
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	movimentar_jogador(delta)
 	limitar_movimento_do_jogador()
+	move_and_slide()
 
 
 func movimentar_jogador(delta: float) -> void:

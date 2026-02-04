@@ -1,27 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4g1icabxqsnm"]
+[gd_scene format=3 uid="uid://d4g1icabxqsnm"]
 
 [ext_resource type="Texture2D" uid="uid://celifuv5smrm2" path="res://Assets/sprites/campo-preto.png" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://blrq61hxheinb" path="res://Assets/sprites/jogador.png" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dret71c86oibu" path="res://Scenes/jogador.tscn" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://qfpok1jh70hw" path="res://Scenes/bola.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dn76emtcyx2ki" path="res://Scenes/game_manager.tscn" id="5_21xkr"]
+[ext_resource type="PackedScene" uid="uid://dd7imp28v1eel" path="res://Scenes/gol.tscn" id="6_6bp64"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1652918517]
 
-[node name="Campo" type="Sprite2D" parent="."]
+[node name="Campo" type="Sprite2D" parent="." unique_id=1740350828]
 texture = ExtResource("1_8gbba")
 centered = false
 
-[node name="LinhaDoMeio" type="Sprite2D" parent="."]
+[node name="LinhaDoMeio" type="Sprite2D" parent="." unique_id=1514229007]
 position = Vector2(640, 360)
 scale = Vector2(0.5, 5.6)
 texture = ExtResource("2_jjvhh")
 
-[node name="Jogador1" parent="." instance=ExtResource("3_kry3j")]
+[node name="Jogador1" parent="." unique_id=334977321 instance=ExtResource("3_kry3j")]
 position = Vector2(64, 360)
 jogador1 = true
 
-[node name="Jogador2" parent="." instance=ExtResource("3_kry3j")]
+[node name="Jogador2" parent="." unique_id=120362206 instance=ExtResource("3_kry3j")]
 position = Vector2(1216, 360)
 
-[node name="Bola" parent="." instance=ExtResource("4_jjvhh")]
+[node name="Bola" parent="." unique_id=300009691 instance=ExtResource("4_jjvhh")]
 position = Vector2(640, 360)
+
+[node name="GameManager" parent="." unique_id=880430844 instance=ExtResource("5_21xkr")]
+
+[node name="Gol1" parent="." unique_id=728753039 instance=ExtResource("6_6bp64")]
+position = Vector2(-64, 0)
+
+[node name="Gol2" parent="." unique_id=48067872 instance=ExtResource("6_6bp64")]
+position = Vector2(1344, 0)
+
+[connection signal="area_entered" from="Gol1" to="GameManager" method="_on_gol_1_area_entered"]
+[connection signal="area_entered" from="Gol2" to="GameManager" method="_on_gol_2_area_entered"]
