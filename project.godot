@@ -15,6 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Pong"
+config/tags=PackedStringArray("learn_to_code")
 run/main_scene="uid://d4g1icabxqsnm"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://is5dawopnsg4"
