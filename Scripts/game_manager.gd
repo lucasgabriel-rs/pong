@@ -15,19 +15,31 @@ var pontuacao_jogador2: int = 0
 @onready var texto_de_pontuacao_jogador_2: Label = $"../UI/PainelDePontuação/TextoDePontuacaoJogador2"
 
 
-func _process(delta: float) -> void:
-	pass
+func _input(event: InputEvent) -> void:
+	# Sair do Jogo
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
+	
+	# Reiniciar partida
+	if event.is_action_pressed("reiniciar"):
+		get_tree().reload_current_scene()
 
 
 func _on_gol_1_area_entered(_area: Area2D) -> void:
+	# Chamado quando o Jogador 2 marca um gol.
 	som_impacto_gol.play()
+	
 	pontuacao_jogador2 += 1
 	texto_de_pontuacao_jogador_2.text = str(pontuacao_jogador2)
+	
 	bola.rodar_timer()
 
 
 func _on_gol_2_area_entered(_area: Area2D) -> void:
+	# Chamado quando o Jogador 1 marca um gol.
 	som_impacto_gol.play()
+	
 	pontuacao_jogador1 += 1
 	texto_de_pontuacao_jogador_1.text = str(pontuacao_jogador1)
+	
 	bola.rodar_timer()
