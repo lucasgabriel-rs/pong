@@ -10,6 +10,10 @@ var nova_direcao: Vector2 = Vector2(0, 0)
 var y_minimo: float = 0
 var y_maximo: float = 720
 
+# Efeitos Sonoros
+@onready var som_impacto_barreira: AudioStreamPlayer = $SomImpactoBarreira
+@onready var som_impacto_jogador: AudioStreamPlayer = $SomImpactoJogador
+
 # Timer
 @onready var timer: Timer = $Timer
 
@@ -51,11 +55,15 @@ func colidir_com_as_paredes() -> void:
 	# Manda a Bola na direção contrária ao tentar sair da tela.
 	if position.y >= y_maximo or position.y <= y_minimo:
 		nova_direcao.y *= -1
+		
+		if position.x >= 0 and position.x <= 1280:
+			som_impacto_barreira.play()
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogadores"):
 		nova_direcao.x *= -1
+		som_impacto_jogador.play()
 
 
 func _on_timer_timeout() -> void:
