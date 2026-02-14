@@ -3,7 +3,8 @@ extends CharacterBody2D
 # Parametros
 @export var jogador1: bool
 var ia: bool
-const IA_DEADZONE: float = 640
+const IA_DEADZONE_MAX: float = 640
+const IA_DEADZONE_MIN: float = 0
 
 # Movimento
 const VELOCIDADE: int = 500
@@ -25,7 +26,7 @@ func _physics_process(delta: float) -> void:
 func _movimentar_jogador(delta: float) -> void:
 	if ia:
 		# Move a raquete de acordo com a posicao y da bola.
-		if bola.position.x <= IA_DEADZONE:
+		if bola.position.x >= IA_DEADZONE_MIN and bola.position.x <= IA_DEADZONE_MAX:
 			position.y = move_toward(position.y, bola.position.y, VELOCIDADE * delta)
 	
 	else:
