@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://vnmc8vmw4pqg"]
+
+[ext_resource type="Script" uid="uid://fojmgp5ruvjd" path="res://Scripts/game_over.gd" id="1_8fo1c"]
+[ext_resource type="Theme" uid="uid://b8c7573tcyyga" path="res://tema.tres" id="1_ojehl"]
+
+[node name="GameOver" type="ColorRect" unique_id=380296768]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_8fo1c")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1735293510]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ojehl")
+
+[node name="Text" type="Label" parent="MarginContainer" unique_id=586532642]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Fim de Jogo"
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=1099858462]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer" unique_id=920876673]
+layout_mode = 2
+
+[node name="PontuacaoJ1" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer" unique_id=793544963]
+layout_mode = 2
+text = "0"
+
+[node name="PontuacaoJ2" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer" unique_id=2075883456]
+layout_mode = 2
+text = "0"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1228583650]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="JogarNovamente" type="Button" parent="MarginContainer/VBoxContainer" unique_id=336719156]
+layout_mode = 2
+text = "Jogar Novamente"
+flat = true
+
+[node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=633717187]
+layout_mode = 2
+text = "Voltar ao Menu"
+flat = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/JogarNovamente" to="." method="_on_jogar_novamente_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]

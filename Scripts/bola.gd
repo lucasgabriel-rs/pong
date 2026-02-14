@@ -1,8 +1,8 @@
 extends Area2D
 
-
 # Movimento
-const VELOCIDADE: int = 500
+var velocidade: float = 500
+const ACELERACAO: float = 1.01
 const POSICAO_INICIAL: Vector2 = Vector2(640, 360)
 var direcao_inicial: Vector2 = Vector2(0, 0)
 var nova_direcao: Vector2 = Vector2(0, 0)
@@ -25,44 +25,44 @@ func _ready() -> void: rodar_timer()
 
 
 func _physics_process(delta: float) -> void:
-	movimentar_bola(delta)
-	colidir_com_as_paredes()
+	_movimentar_bola(delta)
+	_colidir_com_as_paredes()
 
 
 func rodar_timer() -> void: timer.start()
 
 
-func resetar_bola() -> void:
+func _resetar_bola() -> void:
 	# Centraliza a Bola e a manda para uma direção aleatoria
 	position = POSICAO_INICIAL
-	escolher_direcao_inicial()
+	_escolher_direcao_inicial()
 
 
-func escolher_direcao_inicial() -> void:
+func _escolher_direcao_inicial() -> void:
 	# Escolhe as direções horizontal e vertical.
 	var x_aleatorio = [-1, 1].pick_random()
 	var y_aleatorio = [-1, 1].pick_random()
 	
-	# Aplica as novas direções
+	# Aplica as novas direções.
 	direcao_inicial = Vector2(x_aleatorio, y_aleatorio)
 	nova_direcao = direcao_inicial
 
 
-func movimentar_bola(delta: float) -> void:
+func _movimentar_bola(delta: float) -> void:
 	# Movimenta a Bola
-	position += nova_direcao * VELOCIDADE * delta
+	position += nova_direcao * velocidade * delta
 
 
-func colidir_com_as_paredes() -> void:
+func _colidir_com_as_paredes() -> void:
 	# Manda a Bola na direção contrária ao tentar sair da tela.
-	# Funciona fora dos limites do campo e deve funcionar para que a bola
-	# sempre rebata em direcao a colisao do gol,
-	# tirando a necessidade de aumentar a escala da colisao.
 	if position.y >= Y_MAX or position.y <= Y_MIN:
-		nova_direcao.y *= -1
-		
-		# Impede que o efeito sonoro de Impacto na Barreira toque fora dos limites do campo.
 		if position.x >= X_MIN and position.x <= X_MAX:
+			nova_direcao.y *= -1
+			
+			# Acelerar a Bola quando colidir com as Paredes.
+			velocidade *= ACELERACAO
+			
+			# Impede que o efeito sonoro de Impacto na Barreira toque fora dos limites do campo.
 			som_impacto_barreira.play()
 
 
@@ -73,4 +73,4 @@ func _on_body_entered(body: Node2D) -> void:
 		som_impacto_jogador.play()
 
 
-func _on_timer_timeout() -> void: resetar_bola()
+func _on_timer_timeout() -> void: _resetar_bola()

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://8rio3jvl81q5" path="res://Scripts/game_manager.gd" id="1_oj352"]
 [ext_resource type="AudioStream" uid="uid://34vv2410nlk6" path="res://Assets/sons/impacto-gol.wav" id="2_e5fcp"]
 
-[node name="GameManager" type="Node2D" unique_id=880430844]
+[node name="GameManager" type="Node" unique_id=933608161]
 script = ExtResource("1_oj352")
 
 [node name="SomImpactoGol" type="AudioStreamPlayer" parent="." unique_id=175672506]

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://q867wi8b8ptu"]
+
+[ext_resource type="Theme" uid="uid://b8c7573tcyyga" path="res://tema.tres" id="1_3767o"]
+
+[node name="Dificuldade" type="VBoxContainer" unique_id=746109180]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=757387066]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Facil" type="Button" parent="HBoxContainer" unique_id=206622868]
+layout_mode = 2
+theme = ExtResource("1_3767o")
+text = "Facil"
+flat = true
+
+[node name="Normal" type="Button" parent="HBoxContainer" unique_id=1041907859]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_3767o")
+text = "Normal"
+flat = true
+
+[node name="Dificil" type="Button" parent="HBoxContainer" unique_id=991780241]
+layout_mode = 2
+theme = ExtResource("1_3767o")
+text = "Dificil"
+flat = true
+
+[node name="Voltar" type="Button" parent="." unique_id=539276170]
+layout_mode = 2
+theme = ExtResource("1_3767o")
+text = "Voltar"
+flat = true

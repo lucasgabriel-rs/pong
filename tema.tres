@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://b8c7573tcyyga"]
+
+[ext_resource type="FontFile" uid="uid://8k3b6x65b8oh" path="res://Assets/fonte/PublicPixel-z84yD.ttf" id="1_fv4dt"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_fv4dt")
+HBoxContainer/constants/separation = 100
+Label/font_sizes/font_size = 50
+Label/fonts/font = ExtResource("1_fv4dt")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_top = 20

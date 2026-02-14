@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b8pc0to2vfp8y"]
+
+[ext_resource type="Theme" uid="uid://b8c7573tcyyga" path="res://tema.tres" id="1_7vowv"]
+
+[node name="Menu1" type="VBoxContainer" unique_id=1628060321]
+offset_right = 70.0
+offset_bottom = 43.0
+theme_override_constants/separation = 8
+
+[node name="Jogar" type="Button" parent="." unique_id=387580953]
+layout_mode = 2
+theme = ExtResource("1_7vowv")
+text = "JOGAR"
+flat = true
+
+[node name="Sair" type="Button" parent="." unique_id=1549433890]
+layout_mode = 2
+theme = ExtResource("1_7vowv")
+text = "SAIR"
+flat = true
