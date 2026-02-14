@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-# Parametro
+# Parametros
 @export var jogador1: bool
 var ia: bool
+const IA_DEADZONE: float = 640
 
 # Movimento
 const VELOCIDADE: int = 500
@@ -23,10 +24,9 @@ func _physics_process(delta: float) -> void:
 
 func _movimentar_jogador(delta: float) -> void:
 	if ia:
-		var target_y = bola.position.y
-		
-		# A variavel atraso controla o "atraso". Quanto menor, mais lenta a reacao.
-		position.y = lerp(position.y, target_y, global.atraso)
+		# Move a raquete de acordo com a posicao y da bola.
+		if bola.position.x <= IA_DEADZONE:
+			position.y = move_toward(position.y, bola.position.y, VELOCIDADE * delta)
 	
 	else:
 		# Movimento do Jogador 1

@@ -11,7 +11,7 @@ extends Node
 # Parametros
 var pontuacao_jogador1: int = 0
 var pontuacao_jogador2: int = 0
-var _game_over: int = 10
+var _game_over: int = 5
 var reset_posicao_y: float = 360.0
 
 # UI

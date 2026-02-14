@@ -4,7 +4,6 @@
 [ext_resource type="Theme" uid="uid://b8c7573tcyyga" path="res://tema.tres" id="2_cayip"]
 [ext_resource type="PackedScene" uid="uid://b8pc0to2vfp8y" path="res://Scenes/menu_1.tscn" id="3_158mb"]
 [ext_resource type="PackedScene" uid="uid://bj12otqkbi5kd" path="res://Scenes/menu_2.tscn" id="4_158mb"]
-[ext_resource type="PackedScene" uid="uid://q867wi8b8ptu" path="res://Scenes/menu_3.tscn" id="5_wwsa2"]
 
 [node name="Menu" type="Control" unique_id=467393548]
 layout_mode = 3
@@ -53,10 +52,6 @@ text = "SAIR DO JOGO"
 visible = false
 layout_mode = 2
 
-[node name="Menu3" parent="MarginContainer/CenterContainer" unique_id=746109180 instance=ExtResource("5_wwsa2")]
-visible = false
-layout_mode = 2
-
 [node name="Controles" type="Label" parent="MarginContainer" unique_id=456108611]
 layout_mode = 2
 size_flags_horizontal = 0
@@ -71,11 +66,6 @@ Sair da Partida = ESC"
 [connection signal="pressed" from="MarginContainer/CenterContainer/Menu2/HBoxContainer/UmJogador" to="." method="_on_um_jogador_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/Menu2/HBoxContainer/DoisJogadores" to="." method="_on_dois_jogadores_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/Menu2/Voltar" to="." method="_on_voltar_pressed"]
-[connection signal="pressed" from="MarginContainer/CenterContainer/Menu3/HBoxContainer/Facil" to="." method="_on_facil_pressed"]
-[connection signal="pressed" from="MarginContainer/CenterContainer/Menu3/HBoxContainer/Normal" to="." method="_on_normal_pressed"]
-[connection signal="pressed" from="MarginContainer/CenterContainer/Menu3/HBoxContainer/Dificil" to="." method="_on_dificil_pressed"]
-[connection signal="pressed" from="MarginContainer/CenterContainer/Menu3/Voltar" to="." method="_on_menu_3_voltar_pressed"]
 
 [editable path="MarginContainer/CenterContainer/Menu1"]
 [editable path="MarginContainer/CenterContainer/Menu2"]
-[editable path="MarginContainer/CenterContainer/Menu3"]
