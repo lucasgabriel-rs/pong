@@ -1,0 +1,73 @@
+[33mcommit 7c25bbfa3965ba4eb9d614a593c81fd7107b4a9c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Fri Mar 6 17:19:31 2026 -0300
+
+    Revert "Rewriting the player's movement code."
+    
+    This reverts commit db30318e6ceccce1ece0acb1be931c29e6d18046.
+
+[33mcommit db30318e6ceccce1ece0acb1be931c29e6d18046[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Fri Mar 6 16:55:41 2026 -0300
+
+    Rewriting the player's movement code.
+
+[33mcommit 9f9c478407b2f5a1401a79464a07c74f992160a4[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Sun Feb 15 02:29:27 2026 -0300
+
+    Ajustes
+
+[33mcommit bb20b778f7298a594911008a074c60ee50579b81[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Fri Feb 13 22:30:36 2026 -0300
+
+    IA aprimorada
+
+[33mcommit de0847465c1e21539931af0448de8da4fadd22a2[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Fri Feb 13 22:15:48 2026 -0300
+
+    Selecao de Dificuldade Removida e IA aprimorada
+
+[33mcommit bc3ba5fdf8545095d0d46d9efb622dfd6b1387a9[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Fri Feb 13 21:24:46 2026 -0300
+
+    Menus, Game Over e IA
+
+[33mcommit 3b02a4e754fa3d2249db5e1db4a818f2b35f8cb7[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Fri Feb 13 03:08:27 2026 -0300
+
+    Teclas para Reiniciar e Fechar Jogo
+
+[33mcommit baa5a5a472415ea5952879d70a9b194e63fd6474[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Thu Feb 12 22:49:41 2026 -0300
+
+    Efeitos Sonoros
+
+[33mcommit 37d107f40371de8ad68b941bc910ddb40eff2f03[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Thu Feb 12 20:07:14 2026 -0300
+
+    Pontuacao na Tela
+
+[33mcommit 5667b79d5aceedbf11cfd0a2e5e055053cfc7791[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Thu Feb 12 18:04:34 2026 -0300
+
+    Mudança de Renderizador pra Compatibilidade
+
+[33mcommit d228b0fdece21a6eb912a64fc6b7f14164935f5e[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Tue Feb 3 22:02:32 2026 -0300
+
+    pontuação e reset de bola
+
+[33mcommit 34d6b7b9dfdec162e451fa067e03cb635d7cbcda[m
+Author: Lucas Ramos <lucasgabrielramosdasilva94@gmail.com>
+Date:   Tue Feb 3 19:27:09 2026 -0300
+
+    Novo repositório

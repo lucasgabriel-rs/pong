@@ -21,7 +21,7 @@ var reset_posicao_y: float = 360.0
 
 func _ready() -> void:
 	# Define se a IA esta ligada/desligada.
-	jogador_2.ia = global.ia
+	jogador_2.ai = global.ai
 
 
 func _process(_delta: float) -> void:

@@ -1,7 +1,7 @@
 extends Node
 
 # Parametros da IA
-var ia: bool
+var ai: bool
 
 # Pontuacao
 var pontuacao_j1: int = 0

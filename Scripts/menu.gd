@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 # Menu
 @onready var menu_1: VBoxContainer = $MarginContainer/CenterContainer/Menu1
@@ -18,13 +18,13 @@ func _on_sair_pressed() -> void:
 
 func _on_um_jogador_pressed() -> void:
 	# Iniciar jogo em Modo Um Jogador.
-	global.ia = true
+	global.ai = true
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 
 func _on_dois_jogadores_pressed() -> void:
 	# Inicia o jogo em Modo Dois Jogadores.
-	global.ia = false
+	global.ai = false
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 

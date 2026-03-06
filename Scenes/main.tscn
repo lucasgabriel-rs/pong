@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dd7imp28v1eel" path="res://Scenes/gol.tscn" id="6_6bp64"]
 [ext_resource type="Theme" uid="uid://b8c7573tcyyga" path="res://tema.tres" id="7_6bp64"]
 
-[node name="Main" type="Node2D" unique_id=1652918517]
+[node name="Main" type="Node" unique_id=43033552]
 
 [node name="Campo" type="Sprite2D" parent="." unique_id=1740350828]
 texture = ExtResource("1_8gbba")
@@ -21,7 +21,7 @@ texture = ExtResource("2_jjvhh")
 
 [node name="Jogador1" parent="." unique_id=120362206 instance=ExtResource("3_kry3j")]
 position = Vector2(1216, 360)
-jogador1 = true
+player_one = true
 
 [node name="Jogador2" parent="." unique_id=334977321 instance=ExtResource("3_kry3j")]
 position = Vector2(64, 361)
